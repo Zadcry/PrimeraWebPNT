@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Parte 2</title>
+</head>
+<body>
+	<a target="_blank" href="https://zadcry.github.io/PrimeraWebPNT/">Ir a pagina 1</a>
+	<h1>Primera pagina. Parte 2</h1>
+	<!-- Botones y alertas !-->
+	<h2>a) Botones con Alertas y Confirmaciones</h1>
+
+	<button> Boton que sigue sin hacer nada </button>
+	<br><br>
+	<button onclick="Accion1()" id="Bt1"> Boton 1 </button> <br><br>
+	<button onclick="Accion2()" id="Bt2"> Boton 2 </button> <br><br>
+	<button onclick="Accion3()" id="Bt3"> Boton 3^24 </button> <br><br><br>
+
+	<!-- Coleccion de datos !-->
+	<h2>b) Despliegue de datos</h2>
+	<p>Hola, este es un texto que te advierte de la siguiente parte, la cual va a recolectar datos personales <br>(o no segun los pongas). Igualmente no se van a almacenar ni se van a recopilar, ya que no se integrar b̵̢̮̈ā̸̛͓́ͅs̶̖͇̼̪͔͙̈́ę̶̗̐͆͘s̵͎͛͋ ̴̤̮͒̈́̉d̴͇͔͈̱̆͐̽ę̶̛̱͈͍̫͜ ̷̛͚͑̀̀͑d̸̳̖̭̹̈́̿̎͊̂̎a̸̭͈̲̟̾͛̈́́̍t̶̨̜̹́͂͌̑ọ̴̿́̉̽̒s̵͕͓͊́́̑͘ͅ  a paginas web (aun...).  </p><br>
+
+	<p>Nombre: <input type="text", name="RTexto1", id="TB1"></p>
+	<p>Edad: <input type="text", name="RTexto2", id="TB2"></p>
+	<p>Crimen de lesa humanidad favorito: <input type="text", name="RTexto3", id="TB3"></p>
+	<p>¿Que odia?: <input type="text", name="RTexto4", id="TB4"></p>
+	<p>Apellido: <input type="text", name="RTexto4", id="TB5"></p>
+	
+	<button onclick="Accion4()" id="Bt4"> Concatenar nombre y apellido</button> <br><br>
+
+	<p> Nombre:&nbsp;<output id="Out1"></output> </p>
+	<p> Apellido:&nbsp;<output id="Out2"></output> </p>
+	
+	<style type="text/css">
+		/* Comentario en CSS*/
+
+		body{
+			background-image: url(Fondo.png);
+			background-repeat: round;
+			color: rgba(255,255,255,0.8);
+		}
+
+		h1{color: rgba(200,0,47,1.0);}
+		h2{color: rgba(200,0,47,0.9);}
+
+		#Out1{color: rgba(255,255,255,0.9);}
+		#Out2{color: rgba(255,255,255,0.9);}
+		#Bt4{color: rgba(100, 0, 0, 0.9);}
+	</style>
+	<script type="text/javascript">
+		// Comentario en JavaScript
+
+		function Accion1() {
+			alert("ALERTA!!! SE DETECTARON 3 TROYANOS, 20 GB DE NOPOR Y 47 DEMANDAS EN PAKISTAN")
+		}
+
+		function Accion2() {
+			confirm("Ey soy una confirmacion. Solo dale aceptar o rechazar. Osea no importa, de verdad.")
+		}
+
+		function Accion3() {
+			confirm("¿Deseas que este sitio web use cookies sobre tu navegador?")
+			alert("Igual no importa, ya lo hice.")
+		}
+
+		function Accion4(){
+			var Nombre, Apellido
+
+			Nombre = document.getElementById("TB1").value
+			Apellido = document.getElementById("TB5").value
+			C = document.getElementById("TB3").value
+
+			alert("Ah te gusta "+C+"?  Tambien es mi crimen favorito")
+			document.getElementById("Out1").innerHTML = Nombre
+			document.getElementById("Out2").innerHTML = Apellido
+		}
+	</script>
+</body>
+</html>
